@@ -67,23 +67,3 @@ document.addEventListener("keyup", function(event){
       stop();
   }
 });
-
-
-function talkNow(data){
-  var msg = 'Hello Humans! I am Oswaldito, Peace, love and Open Source!'
-  if(data){
-    msg = data.msg || msg
-  }
-  var utterance = new SpeechSynthesisUtterance(msg);
-  var voices = window.speechSynthesis.getVoices();
-  utterance.lang = 'en-US';
-  utterance.pitch = 1;
-  utterance.voice =  voices[67];
-  utterance.voiceURI = voices[67].voiceURI;
-  window.speechSynthesis.speak(utterance);
-}
-
-  socket.on('voice', function(data){
-    talkNow(data);
-  });
-  setTimeout(  talkNow("Hello Human!"), 2000)
