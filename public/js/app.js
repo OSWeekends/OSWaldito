@@ -1,11 +1,5 @@
 var socket = io();
 
-responsiveVoice.speak("hello human!", "UK English Male");
-
-socket.on('voice', function(data){
-  responsiveVoice.speak(data.msg, data.voice);
-});
-
 function moveForward(){
     socket.emit('forward');
 }
@@ -73,3 +67,13 @@ document.addEventListener("keyup", function(event){
       stop();
   }
 });
+
+
+if(responsiveVoice.voiceSupport()) {
+  responsiveVoice.speak("hello human!", "UK English Male");
+  socket.on('voice', function(data){
+    responsiveVoice.speak(data.msg, data.voice);
+  });
+}
+
+
