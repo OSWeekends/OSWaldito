@@ -1,6 +1,7 @@
 var socket = io();
 
 function moveForward(){
+    console.log("emitiendo...")
     socket.emit('forward');
 }
 

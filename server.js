@@ -51,6 +51,7 @@ rpio.open(rightForward, rpio.OUTPUT, rpio.LOW);
 rpio.open(rightBackward, rpio.OUTPUT, rpio.LOW);
 
 io.on('connection', function (socket) {
+/*
     socket.on('talk', function(data){
       console.log("talk disparado con ", data)
       socket.emit('voice', {
@@ -58,6 +59,7 @@ io.on('connection', function (socket) {
         voice: "UK English Male"
       })
     })
+*/
     socket.on('stop', function () {
         rpio.write(rightForward, rpio.LOW);
         rpio.write(rightBackward, rpio.LOW);
@@ -66,6 +68,7 @@ io.on('connection', function (socket) {
     });
 
     socket.on('forward', function () {
+        console.log("Avance");
         rpio.write(rightForward, rpio.HIGH);
         rpio.write(leftForward, rpio.HIGH);
     });
