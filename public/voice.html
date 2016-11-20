@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome</title>
+  <style>
+  html {
+     width:100%;
+     height:100%;
+     background:url(img/logo.png) center center no-repeat;
+  }
+  </style>
+</head>
+<body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script>
+(function(){
+  var socket = io();
+  var voices = speechSynthesis.getVoices();
+  
+  function talkNow(data){
+    var msg = 'Hello Humans! I am Oswaldito, Peace, love and Open Source!'
+    if(data){
+      msg = data.msg || msg
+    }
+  
+    var utterance = new SpeechSynthesisUtterance(msg);
+    if(voices.length === 0){
+      voices = speechSynthesis.getVoices();
+    } else {
+      utterance.lang = 'en-US';
+      utterance.pitch = 1;
+      utterance.voice =  voices[67];
+      utterance.voiceURI = voices[67].voiceURI;
+      speechSynthesis.speak(utterance);
+    }
+  }
+
+  socket.on('voice', function(data){
+    talkNow(data);
+  });
+})()
+</script>
+</body>
+</html>

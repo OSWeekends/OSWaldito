@@ -1,0 +1,43 @@
+{
+  "name": "oswaldito",
+  "version": "0.1.0",
+  "description": "Robot Open Source que utilizamos en OSWeekends para gestionar redes sociales, telepresencia, etc....",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSWeekends/OSWaldito.git"
+  },
+  "keywords": [
+    "robot",
+    "raspberry",
+    "pi",
+    "iot",
+    "hardware",
+    "slack",
+    "socialbot"
+  ],
+  "author": "Open Source Weekends",  
+  "contributors": [
+    {
+      "name": "Ulises Gascón",
+      "url": "https://github.com/ulisesGascon"
+    }
+  ],
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/OSWeekends/OSWaldito/issues"
+  },
+  "homepage": "https://github.com/OSWeekends/OSWaldito#readme",
+  "dependencies": {
+    "pillars": "0.3.7",
+    "rpio": "0.9.12",
+    "socket.io": "1.5.0",
+    "hangouts-bot": "0.2.1",
+    "scheduled": "0.4.5",
+    "slack-node": "0.1.8",
+    "twitter": "1.4.0"
+  }
+}
