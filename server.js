@@ -2,7 +2,11 @@ var project = require('pillars'),
     io = require('socket.io')(project.services.get('http').server),
     rpio = require('rpio'),
     fs = require('fs'),
-    spawn = require('child_process').spawn;
+    config = require('./config');
+
+if (config.socialConnectionEnable){
+    require('./directo');
+}
 
 // Starting the project
 project.services.get('http').configure({
