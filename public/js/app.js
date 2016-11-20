@@ -74,7 +74,6 @@ function talkNow(data){
   if(data){
     msg = data.msg || msg
   }
-
   var utterance = new SpeechSynthesisUtterance(msg);
   var voices = window.speechSynthesis.getVoices();
   utterance.lang = 'en-US';
@@ -87,5 +86,4 @@ function talkNow(data){
   socket.on('voice', function(data){
     talkNow(data);
   });
-  
-  talkNow("Hello Human!");
+  setTimeout(  talkNow("Hello Human!"), 2000)
