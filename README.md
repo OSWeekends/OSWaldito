@@ -10,6 +10,15 @@ Robot Open Source que utilizamos en OSWeekends para gestionar redes sociales, te
 
 OSWaldito es un proyecto de Open Source Weekends. Y es considerado un miembro más de la organización.
 
+### Importante
+
+**Arranque manual de FFMPEG**
+
+```bash
+sudo ffmpeg -s 320x240 -y -f v4l2 -i /dev/video0 -update 1 -r 30  /home/pi/Desktop/oswaldito/public/cam.jpg
+```
+
+
 ### Software
 
 *PENDIENTE - Lista destallada de Software*
