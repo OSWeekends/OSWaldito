@@ -1,4 +1,5 @@
 var config = {
+    socialConnectionEnable: true,
     hangouts: {
       usuarioId: "",
       usuarioAutorizado: "",
