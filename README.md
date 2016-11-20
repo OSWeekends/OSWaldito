@@ -42,3 +42,4 @@ OSWaldito utiliza Node.js, Websockets, Pillarsjs, ffmpeg, etc...
 ### Agradecimientos
 
 - [Reloj](public/clock.html) *Gracias a [dtinth en Codepen](http://codepen.io/dtinth/pen/tDihg)*
+- [VR simulación](public/vr.html) *Gracias a [sgang007/vrStreamer en Github](https://github.com/sgang007/vrStreamer)*
