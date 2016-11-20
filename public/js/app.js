@@ -69,11 +69,23 @@ document.addEventListener("keyup", function(event){
 });
 
 
-if(responsiveVoice.voiceSupport()) {
-  responsiveVoice.speak("hello human!", "UK English Male");
-  socket.on('voice', function(data){
-    responsiveVoice.speak(data.msg, data.voice);
-  });
+function talkNow(data){
+  var msg = 'Hello Humans! I am Oswaldito, Peace, love and Open Source!'
+  if(data){
+    msg = data.msg || msg
+  }
+
+  var utterance = new SpeechSynthesisUtterance(msg);
+  var voices = window.speechSynthesis.getVoices();
+  utterance.lang = 'en-US';
+  utterance.pitch = 1;
+  utterance.voice =  voices[67];
+  utterance.voiceURI = voices[67].voiceURI;
+  window.speechSynthesis.speak(utterance);
 }
 
-
+  socket.on('voice', function(data){
+    talkNow(data);
+  });
+  
+  talkNow("Hello Human!");
