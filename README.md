@@ -38,3 +38,7 @@ OSWaldito utiliza Node.js, Websockets, Pillarsjs, ffmpeg, etc...
 
 ![chasis-1](images/chasis-1.jpg)
 ![chasis-2](images/chasis-2.jpg)
+
+### Agradecimientos
+
+- [Reloj](public/clock.html) *Gracias a [dtinth en Codepen](http://codepen.io/dtinth/pen/tDihg)*
