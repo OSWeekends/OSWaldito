@@ -35,7 +35,7 @@
     "pillars": "0.3.7",
     "rpio": "0.9.12",
     "socket.io": "1.5.0",
-    "hangouts-bot": "0.2.1",
+    "hangouts-bot": "0.2.0",
     "scheduled": "0.4.5",
     "slack-node": "0.1.8",
     "twitter": "1.4.0"
