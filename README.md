@@ -16,7 +16,7 @@ OSWaldito es un proyecto de Open Source Weekends. Y es considerado un miembro m√
 **Arranque manual de FFMPEG**
 
 ```bash
-sudo ffmpeg -s 320x240 -y -f v4l2 -i /dev/video0 -update 1 -r 30  /home/pi/Desktop/oswaldito/public/cam.jpg
+sudo ffmpeg -s 320x240 -y -f v4l2 -i /dev/video0 -update 1 -r 30  /home/pi/Desktop/OSWaldito/public/cam.jpg
 ```
 
 
