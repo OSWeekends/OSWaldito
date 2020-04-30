@@ -1,0 +1,22 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - slack-node > requestretry > lodash:
+        patched: '2020-04-30T21:27:51.211Z'
+    - pillars > textualization > jshint > lodash:
+        patched: '2020-04-30T21:27:51.211Z'
+    - scheduled > textualization > jshint > lodash:
+        patched: '2020-04-30T21:27:51.211Z'
+    - pillars > scheduled > textualization > jshint > lodash:
+        patched: '2020-04-30T21:27:51.211Z'
+    - pillars > templated > textualization > jshint > lodash:
+        patched: '2020-04-30T21:27:51.211Z'
+    - pillars > templated > pug > pug-code-gen > constantinople > babel-types > lodash:
+        patched: '2020-04-30T21:27:51.211Z'
+    - pillars > templated > pug > pug-filters > constantinople > babel-types > lodash:
+        patched: '2020-04-30T21:27:51.211Z'
+    - pillars > templated > pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
+        patched: '2020-04-30T21:27:51.211Z'

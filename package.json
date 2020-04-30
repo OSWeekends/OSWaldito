@@ -4,7 +4,9 @@
   "description": "Robot Open Source que utilizamos en OSWeekends para gestionar redes sociales, telepresencia, etc....",
   "main": "server",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
     "slack",
     "socialbot"
   ],
-  "author": "Open Source Weekends",  
+  "author": "Open Source Weekends",
   "contributors": [
     {
       "name": "Ulises Gascón",
@@ -38,6 +40,8 @@
     "hangouts-bot": "0.2.1",
     "scheduled": "0.4.5",
     "slack-node": "0.1.8",
-    "twitter": "1.4.0"
-  }
+    "twitter": "1.4.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
